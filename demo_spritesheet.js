@@ -35,10 +35,9 @@ function setup() {
 
     // add it to the stage and render!
     app.stage.addChild(animatedCapguy);
-    animate();
+    app.ticker.add(delta => gameLoop(delta));
 }
 
-function animate() {
-  requestAnimationFrame(animate);
-  animatedCapguy.position.x = (animatedCapguy.x + 10) % (background.width + 200);
+function gameLoop(delta) {
+    animatedCapguy.x = (animatedCapguy.x + 5*delta) % (background.width + 200);
 }
