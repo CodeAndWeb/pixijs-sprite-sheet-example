@@ -5,17 +5,19 @@ let app = new PIXI.Application({ width: 800, height: 450 });
 // add the canvas that Pixi automatically created for you to the HTML document
 document.body.appendChild(app.view);
 
-let animatedCapguy, background;
+let animatedCapguy, background, spritesheetname;
+
+spritesheetname = usePng8 ? "images/spritesheet-png8.json" : "images/spritesheet.json";
 
 // load sprite sheet image + data file, call setup() if completed
 PIXI.loader
-    .add("images/spritesheet.json")
+    .add(spritesheetname)
     .load(setup);
 
 
 function setup() {
     // the sprite sheet we've just loaded:
-    let sheet = PIXI.loader.resources["images/spritesheet.json"].spritesheet;
+    let sheet = PIXI.loader.resources[spritesheetname].spritesheet;
 
     // initialize background sprite
     background = new PIXI.Sprite(sheet.textures["background.png"]);

@@ -572,10 +572,10 @@
 "meta": {
 	"app": "https://www.codeandweb.com/texturepacker",
 	"version": "1.0",
-	"image": "spritesheet.png",
+	"image": "spritesheet-png8.png",
 	"format": "RGBA8888",
 	"size": {"w":2033,"h":2030},
 	"scale": "1",
-	"smartupdate": "$TexturePacker:SmartUpdate:e43d826ef9d678436550c17183da6e32:5626221c486986a875a84f25a76e937d:729adc6043343cfda41c447ce8f464d6$"
+	"smartupdate": "$TexturePacker:SmartUpdate:5ad69a7f34d1ffba0b5a484e8f39c54c:5626221c486986a875a84f25a76e937d:f331168cf3eb3f2bc6c950925289a565$"
 }
 }
