@@ -25,7 +25,7 @@
 	"trimmed": true,
 	"spriteSourceSize": {"x":0,"y":8,"w":168,"h":303},
 	"sourceSize": {"w":187,"h":324},
-	"anchor": {"x":0.5,"y":1}
+	"anchor": {"x":0.518717,"y":0.848765}
 },
 "capguy_03.png":
 {
@@ -34,7 +34,7 @@
 	"trimmed": true,
 	"spriteSourceSize": {"x":26,"y":2,"w":152,"h":307},
 	"sourceSize": {"w":187,"h":324},
-	"anchor": {"x":0.5,"y":1}
+	"anchor": {"x":0.508021,"y":0.703704}
 },
 "capguy_04.png":
 {
@@ -43,7 +43,7 @@
 	"trimmed": true,
 	"spriteSourceSize": {"x":42,"y":1,"w":141,"h":306},
 	"sourceSize": {"w":187,"h":324},
-	"anchor": {"x":0.5,"y":1}
+	"anchor": {"x":0.491979,"y":0.67284}
 },
 "capguy_05.png":
 {
@@ -52,7 +52,7 @@
 	"trimmed": true,
 	"spriteSourceSize": {"x":33,"y":3,"w":139,"h":311},
 	"sourceSize": {"w":187,"h":324},
-	"anchor": {"x":0.5,"y":1}
+	"anchor": {"x":0.481283,"y":0.614198}
 },
 "capguy_06.png":
 {
@@ -61,7 +61,7 @@
 	"trimmed": true,
 	"spriteSourceSize": {"x":29,"y":8,"w":135,"h":311},
 	"sourceSize": {"w":187,"h":324},
-	"anchor": {"x":0.5,"y":1}
+	"anchor": {"x":0.491979,"y":0.669753}
 },
 "capguy_07.png":
 {
@@ -70,7 +70,7 @@
 	"trimmed": true,
 	"spriteSourceSize": {"x":32,"y":2,"w":146,"h":314},
 	"sourceSize": {"w":187,"h":324},
-	"anchor": {"x":0.5,"y":1}
+	"anchor": {"x":0.508021,"y":0.75}
 },
 "capguy_08.png":
 {
@@ -79,7 +79,7 @@
 	"trimmed": true,
 	"spriteSourceSize": {"x":22,"y":1,"w":161,"h":319},
 	"sourceSize": {"w":187,"h":324},
-	"anchor": {"x":0.5,"y":1}
+	"anchor": {"x":0.508021,"y":0.916667}
 },
 "objects/Box1.png":
 {
@@ -576,6 +576,6 @@
 	"format": "RGBA8888",
 	"size": {"w":2033,"h":2030},
 	"scale": "1",
-	"smartupdate": "$TexturePacker:SmartUpdate:e43d826ef9d678436550c17183da6e32:5626221c486986a875a84f25a76e937d:729adc6043343cfda41c447ce8f464d6$"
+	"smartupdate": "$TexturePacker:SmartUpdate:596b8a7ce954f6b3f32636e12eb85bdd:5626221c486986a875a84f25a76e937d:729adc6043343cfda41c447ce8f464d6$"
 }
 }

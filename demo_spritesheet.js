@@ -28,12 +28,15 @@ function setup() {
     app.stage.scale.y = app.view.height / background.height;
 
     // create an animated sprite
-    animatedCapguy = new PIXI.extras.AnimatedSprite(sheet.animations["capguy"]);
+    animatedCapguy = new PIXI.AnimatedSprite(sheet.animations["capguy"]);
 
     // configure + start animation:
     animatedCapguy.animationSpeed = 0.167;                  // 6 fps
-    animatedCapguy.position.set(0, background.height - 50); // almost bottom-left corner of the canvas
+    animatedCapguy.position.set(0, background.height - 100); // almost bottom-left corner of the canvas
     animatedCapguy.play();
+
+    // Enable this to update the anchor points with each animation frame
+    // animatedCapguy.updateAnchor = true;
 
     // add it to the stage and render!
     app.stage.addChild(animatedCapguy);
