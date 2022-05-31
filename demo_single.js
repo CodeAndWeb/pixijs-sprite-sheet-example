@@ -75,7 +75,7 @@ const objects = [
 ];
 
 // load sprite sheet image + data file, call setup() if completed
-PIXI.loader
+app.loader
     .add("images/sprites/background.png")
     .add(capguyFrames)
     .add(objects)
@@ -83,7 +83,7 @@ PIXI.loader
 
 
 function setup() {
-    let resources = PIXI.loader.resources;
+    let resources = app.loader.resources;
 
     // initialize background sprite
     background = new PIXI.Sprite(resources["images/sprites/background.png"].texture);
@@ -94,7 +94,7 @@ function setup() {
     app.stage.scale.y = app.view.height / background.height;
 
     // create an animated sprite
-    animatedCapguy = new PIXI.extras.AnimatedSprite.fromFrames(capguyFrames);
+    animatedCapguy = new PIXI.AnimatedSprite.fromFrames(capguyFrames);
 
     // configure + start animation:
     animatedCapguy.animationSpeed = 0.167;                  // 6 fps

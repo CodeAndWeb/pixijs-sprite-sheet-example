@@ -10,14 +10,14 @@ let animatedCapguy, background, spritesheetname;
 spritesheetname = usePng8 ? "images/spritesheet-png8.json" : "images/spritesheet.json";
 
 // load sprite sheet image + data file, call setup() if completed
-PIXI.loader
+app.loader
     .add(spritesheetname)
     .load(setup);
 
 
 function setup() {
     // the sprite sheet we've just loaded:
-    let sheet = PIXI.loader.resources[spritesheetname].spritesheet;
+    let sheet = app.loader.resources[spritesheetname].spritesheet;
 
     // initialize background sprite
     background = new PIXI.Sprite(sheet.textures["background.png"]);
