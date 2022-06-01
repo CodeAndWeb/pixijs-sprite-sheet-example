@@ -28,7 +28,7 @@ function setup() {
     app.stage.scale.y = app.view.height / background.height;
 
     // create an animated sprite
-    animatedCapguy = new PIXI.AnimatedSprite(sheet.animations["capguy"]);
+    animatedCapguy = new PIXI.AnimatedSprite(sheet.animations["capguy/walk"]);
 
     // configure + start animation:
     animatedCapguy.animationSpeed = 0.167;                  // 6 fps
