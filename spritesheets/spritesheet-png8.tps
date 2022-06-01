@@ -60,7 +60,7 @@
         <key>jxrCompressionLevel</key>
         <uint>0</uint>
         <key>ditherType</key>
-        <enum type="SettingsBase::DitherType">NearestNeighbour</enum>
+        <enum type="SettingsBase::DitherType">PngQuantHigh</enum>
         <key>backgroundColor</key>
         <uint>0</uint>
         <key>libGdx</key>
@@ -86,7 +86,7 @@
         <key>atfFormats</key>
         <string></string>
         <key>textureFormat</key>
-        <enum type="SettingsBase::TextureFormat">png</enum>
+        <enum type="SettingsBase::TextureFormat">png8</enum>
         <key>borderPadding</key>
         <uint>0</uint>
         <key>maxTextureSize</key>
@@ -136,7 +136,7 @@
             <key>data</key>
             <struct type="DataFile">
                 <key>name</key>
-                <filename>spritesheet.json</filename>
+                <filename>spritesheet-png8.json</filename>
             </struct>
         </map>
         <key>multiPack</key>
@@ -185,7 +185,7 @@
         </struct>
         <key>individualSpriteSettings</key>
         <map type="IndividualSpriteSettingsMap">
-            <key type="filename">sprites/background.png</key>
+            <key type="filename">../sprites/background.png</key>
             <struct type="IndividualSpriteSettings">
                 <key>pivotPoint</key>
                 <point_f>0,0</point_f>
@@ -200,14 +200,14 @@
                 <key>scale9FromFile</key>
                 <false/>
             </struct>
-            <key type="filename">sprites/capguy/walk_01.png</key>
-            <key type="filename">sprites/capguy/walk_02.png</key>
-            <key type="filename">sprites/capguy/walk_03.png</key>
-            <key type="filename">sprites/capguy/walk_04.png</key>
-            <key type="filename">sprites/capguy/walk_05.png</key>
-            <key type="filename">sprites/capguy/walk_06.png</key>
-            <key type="filename">sprites/capguy/walk_07.png</key>
-            <key type="filename">sprites/capguy/walk_08.png</key>
+            <key type="filename">../sprites/capguy/walk_01.png</key>
+            <key type="filename">../sprites/capguy/walk_02.png</key>
+            <key type="filename">../sprites/capguy/walk_03.png</key>
+            <key type="filename">../sprites/capguy/walk_04.png</key>
+            <key type="filename">../sprites/capguy/walk_05.png</key>
+            <key type="filename">../sprites/capguy/walk_06.png</key>
+            <key type="filename">../sprites/capguy/walk_07.png</key>
+            <key type="filename">../sprites/capguy/walk_08.png</key>
             <struct type="IndividualSpriteSettings">
                 <key>pivotPoint</key>
                 <point_f>0.5,1</point_f>
@@ -222,7 +222,7 @@
                 <key>scale9FromFile</key>
                 <false/>
             </struct>
-            <key type="filename">sprites/objects/box-a.png</key>
+            <key type="filename">../sprites/objects/box-a.png</key>
             <struct type="IndividualSpriteSettings">
                 <key>pivotPoint</key>
                 <point_f>0,0</point_f>
@@ -237,7 +237,7 @@
                 <key>scale9FromFile</key>
                 <false/>
             </struct>
-            <key type="filename">sprites/objects/box-b.png</key>
+            <key type="filename">../sprites/objects/box-b.png</key>
             <struct type="IndividualSpriteSettings">
                 <key>pivotPoint</key>
                 <point_f>0,0</point_f>
@@ -252,7 +252,7 @@
                 <key>scale9FromFile</key>
                 <false/>
             </struct>
-            <key type="filename">sprites/objects/box-open.png</key>
+            <key type="filename">../sprites/objects/box-open.png</key>
             <struct type="IndividualSpriteSettings">
                 <key>pivotPoint</key>
                 <point_f>0,0</point_f>
@@ -267,7 +267,7 @@
                 <key>scale9FromFile</key>
                 <false/>
             </struct>
-            <key type="filename">sprites/objects/bus-bench.png</key>
+            <key type="filename">../sprites/objects/bus-bench.png</key>
             <struct type="IndividualSpriteSettings">
                 <key>pivotPoint</key>
                 <point_f>0,0</point_f>
@@ -282,7 +282,7 @@
                 <key>scale9FromFile</key>
                 <false/>
             </struct>
-            <key type="filename">sprites/objects/crate-green-a.png</key>
+            <key type="filename">../sprites/objects/crate-green-a.png</key>
             <struct type="IndividualSpriteSettings">
                 <key>pivotPoint</key>
                 <point_f>0,0</point_f>
@@ -297,7 +297,7 @@
                 <key>scale9FromFile</key>
                 <false/>
             </struct>
-            <key type="filename">sprites/objects/crate-green-b.png</key>
+            <key type="filename">../sprites/objects/crate-green-b.png</key>
             <struct type="IndividualSpriteSettings">
                 <key>pivotPoint</key>
                 <point_f>0,0</point_f>
@@ -312,7 +312,7 @@
                 <key>scale9FromFile</key>
                 <false/>
             </struct>
-            <key type="filename">sprites/objects/crate-orange.png</key>
+            <key type="filename">../sprites/objects/crate-orange.png</key>
             <struct type="IndividualSpriteSettings">
                 <key>pivotPoint</key>
                 <point_f>0,0</point_f>
@@ -327,7 +327,7 @@
                 <key>scale9FromFile</key>
                 <false/>
             </struct>
-            <key type="filename">sprites/objects/crate-purple-a.png</key>
+            <key type="filename">../sprites/objects/crate-purple-a.png</key>
             <struct type="IndividualSpriteSettings">
                 <key>pivotPoint</key>
                 <point_f>0,0</point_f>
@@ -342,7 +342,7 @@
                 <key>scale9FromFile</key>
                 <false/>
             </struct>
-            <key type="filename">sprites/objects/crate-purple-b.png</key>
+            <key type="filename">../sprites/objects/crate-purple-b.png</key>
             <struct type="IndividualSpriteSettings">
                 <key>pivotPoint</key>
                 <point_f>0,0</point_f>
@@ -357,7 +357,7 @@
                 <key>scale9FromFile</key>
                 <false/>
             </struct>
-            <key type="filename">sprites/objects/dog-poo.png</key>
+            <key type="filename">../sprites/objects/dog-poo.png</key>
             <struct type="IndividualSpriteSettings">
                 <key>pivotPoint</key>
                 <point_f>0,0</point_f>
@@ -372,7 +372,7 @@
                 <key>scale9FromFile</key>
                 <false/>
             </struct>
-            <key type="filename">sprites/objects/flower-pot.png</key>
+            <key type="filename">../sprites/objects/flower-pot.png</key>
             <struct type="IndividualSpriteSettings">
                 <key>pivotPoint</key>
                 <point_f>0,0</point_f>
@@ -387,7 +387,7 @@
                 <key>scale9FromFile</key>
                 <false/>
             </struct>
-            <key type="filename">sprites/objects/fruit-stand.png</key>
+            <key type="filename">../sprites/objects/fruit-stand.png</key>
             <struct type="IndividualSpriteSettings">
                 <key>pivotPoint</key>
                 <point_f>0,0</point_f>
@@ -402,7 +402,7 @@
                 <key>scale9FromFile</key>
                 <false/>
             </struct>
-            <key type="filename">sprites/objects/hydrant.png</key>
+            <key type="filename">../sprites/objects/hydrant.png</key>
             <struct type="IndividualSpriteSettings">
                 <key>pivotPoint</key>
                 <point_f>0,0</point_f>
@@ -417,12 +417,12 @@
                 <key>scale9FromFile</key>
                 <false/>
             </struct>
-            <key type="filename">sprites/objects/mailbox1/hit-01.png</key>
-            <key type="filename">sprites/objects/mailbox1/hit-02.png</key>
-            <key type="filename">sprites/objects/mailbox1/hit-03.png</key>
-            <key type="filename">sprites/objects/mailbox1/hit-04.png</key>
-            <key type="filename">sprites/objects/mailbox1/hit-05.png</key>
-            <key type="filename">sprites/objects/mailbox1/mailbox.png</key>
+            <key type="filename">../sprites/objects/mailbox1/hit-01.png</key>
+            <key type="filename">../sprites/objects/mailbox1/hit-02.png</key>
+            <key type="filename">../sprites/objects/mailbox1/hit-03.png</key>
+            <key type="filename">../sprites/objects/mailbox1/hit-04.png</key>
+            <key type="filename">../sprites/objects/mailbox1/hit-05.png</key>
+            <key type="filename">../sprites/objects/mailbox1/mailbox.png</key>
             <struct type="IndividualSpriteSettings">
                 <key>pivotPoint</key>
                 <point_f>0,0</point_f>
@@ -437,18 +437,18 @@
                 <key>scale9FromFile</key>
                 <false/>
             </struct>
-            <key type="filename">sprites/objects/mailbox2/hit-01.png</key>
-            <key type="filename">sprites/objects/mailbox2/hit-02.png</key>
-            <key type="filename">sprites/objects/mailbox2/hit-03.png</key>
-            <key type="filename">sprites/objects/mailbox2/hit-04.png</key>
-            <key type="filename">sprites/objects/mailbox2/hit-05.png</key>
-            <key type="filename">sprites/objects/mailbox2/hit-06.png</key>
-            <key type="filename">sprites/objects/mailbox2/hit-07.png</key>
-            <key type="filename">sprites/objects/mailbox2/hit-08.png</key>
-            <key type="filename">sprites/objects/mailbox2/hit-09.png</key>
-            <key type="filename">sprites/objects/mailbox2/hit-10.png</key>
-            <key type="filename">sprites/objects/mailbox2/hit-11.png</key>
-            <key type="filename">sprites/objects/mailbox2/mailbox.png</key>
+            <key type="filename">../sprites/objects/mailbox2/hit-01.png</key>
+            <key type="filename">../sprites/objects/mailbox2/hit-02.png</key>
+            <key type="filename">../sprites/objects/mailbox2/hit-03.png</key>
+            <key type="filename">../sprites/objects/mailbox2/hit-04.png</key>
+            <key type="filename">../sprites/objects/mailbox2/hit-05.png</key>
+            <key type="filename">../sprites/objects/mailbox2/hit-06.png</key>
+            <key type="filename">../sprites/objects/mailbox2/hit-07.png</key>
+            <key type="filename">../sprites/objects/mailbox2/hit-08.png</key>
+            <key type="filename">../sprites/objects/mailbox2/hit-09.png</key>
+            <key type="filename">../sprites/objects/mailbox2/hit-10.png</key>
+            <key type="filename">../sprites/objects/mailbox2/hit-11.png</key>
+            <key type="filename">../sprites/objects/mailbox2/mailbox.png</key>
             <struct type="IndividualSpriteSettings">
                 <key>pivotPoint</key>
                 <point_f>0,0</point_f>
@@ -463,14 +463,14 @@
                 <key>scale9FromFile</key>
                 <false/>
             </struct>
-            <key type="filename">sprites/objects/manhole/hit-01.png</key>
-            <key type="filename">sprites/objects/manhole/hit-02.png</key>
-            <key type="filename">sprites/objects/manhole/hit-03.png</key>
-            <key type="filename">sprites/objects/manhole/hit-04.png</key>
-            <key type="filename">sprites/objects/manhole/hit-05.png</key>
-            <key type="filename">sprites/objects/manhole/hit-06.png</key>
-            <key type="filename">sprites/objects/manhole/hit-07.png</key>
-            <key type="filename">sprites/objects/manhole/manhole.png</key>
+            <key type="filename">../sprites/objects/manhole/hit-01.png</key>
+            <key type="filename">../sprites/objects/manhole/hit-02.png</key>
+            <key type="filename">../sprites/objects/manhole/hit-03.png</key>
+            <key type="filename">../sprites/objects/manhole/hit-04.png</key>
+            <key type="filename">../sprites/objects/manhole/hit-05.png</key>
+            <key type="filename">../sprites/objects/manhole/hit-06.png</key>
+            <key type="filename">../sprites/objects/manhole/hit-07.png</key>
+            <key type="filename">../sprites/objects/manhole/manhole.png</key>
             <struct type="IndividualSpriteSettings">
                 <key>pivotPoint</key>
                 <point_f>0,0</point_f>
@@ -485,11 +485,11 @@
                 <key>scale9FromFile</key>
                 <false/>
             </struct>
-            <key type="filename">sprites/objects/newspaperbox/hit-01.png</key>
-            <key type="filename">sprites/objects/newspaperbox/hit-02.png</key>
-            <key type="filename">sprites/objects/newspaperbox/hit-03.png</key>
-            <key type="filename">sprites/objects/newspaperbox/hit-04.png</key>
-            <key type="filename">sprites/objects/newspaperbox/newspaperbox.png</key>
+            <key type="filename">../sprites/objects/newspaperbox/hit-01.png</key>
+            <key type="filename">../sprites/objects/newspaperbox/hit-02.png</key>
+            <key type="filename">../sprites/objects/newspaperbox/hit-03.png</key>
+            <key type="filename">../sprites/objects/newspaperbox/hit-04.png</key>
+            <key type="filename">../sprites/objects/newspaperbox/newspaperbox.png</key>
             <struct type="IndividualSpriteSettings">
                 <key>pivotPoint</key>
                 <point_f>0,0</point_f>
@@ -504,7 +504,7 @@
                 <key>scale9FromFile</key>
                 <false/>
             </struct>
-            <key type="filename">sprites/objects/rain.png</key>
+            <key type="filename">../sprites/objects/rain.png</key>
             <struct type="IndividualSpriteSettings">
                 <key>pivotPoint</key>
                 <point_f>0,0</point_f>
@@ -519,12 +519,12 @@
                 <key>scale9FromFile</key>
                 <false/>
             </struct>
-            <key type="filename">sprites/objects/storesign/hit-01.png</key>
-            <key type="filename">sprites/objects/storesign/hit-02.png</key>
-            <key type="filename">sprites/objects/storesign/hit-03.png</key>
-            <key type="filename">sprites/objects/storesign/hit-04.png</key>
-            <key type="filename">sprites/objects/storesign/hit-05.png</key>
-            <key type="filename">sprites/objects/storesign/storesign.png</key>
+            <key type="filename">../sprites/objects/storesign/hit-01.png</key>
+            <key type="filename">../sprites/objects/storesign/hit-02.png</key>
+            <key type="filename">../sprites/objects/storesign/hit-03.png</key>
+            <key type="filename">../sprites/objects/storesign/hit-04.png</key>
+            <key type="filename">../sprites/objects/storesign/hit-05.png</key>
+            <key type="filename">../sprites/objects/storesign/storesign.png</key>
             <struct type="IndividualSpriteSettings">
                 <key>pivotPoint</key>
                 <point_f>0,0</point_f>
@@ -539,13 +539,13 @@
                 <key>scale9FromFile</key>
                 <false/>
             </struct>
-            <key type="filename">sprites/objects/trashcan/hit-01.png</key>
-            <key type="filename">sprites/objects/trashcan/hit-02.png</key>
-            <key type="filename">sprites/objects/trashcan/hit-03.png</key>
-            <key type="filename">sprites/objects/trashcan/hit-04.png</key>
-            <key type="filename">sprites/objects/trashcan/hit-05.png</key>
-            <key type="filename">sprites/objects/trashcan/hit-06.png</key>
-            <key type="filename">sprites/objects/trashcan/trashcan.png</key>
+            <key type="filename">../sprites/objects/trashcan/hit-01.png</key>
+            <key type="filename">../sprites/objects/trashcan/hit-02.png</key>
+            <key type="filename">../sprites/objects/trashcan/hit-03.png</key>
+            <key type="filename">../sprites/objects/trashcan/hit-04.png</key>
+            <key type="filename">../sprites/objects/trashcan/hit-05.png</key>
+            <key type="filename">../sprites/objects/trashcan/hit-06.png</key>
+            <key type="filename">../sprites/objects/trashcan/trashcan.png</key>
             <struct type="IndividualSpriteSettings">
                 <key>pivotPoint</key>
                 <point_f>0,0</point_f>
@@ -563,7 +563,7 @@
         </map>
         <key>fileList</key>
         <array>
-            <filename>sprites</filename>
+            <filename>../sprites</filename>
         </array>
         <key>ignoreFileList</key>
         <array/>

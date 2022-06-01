@@ -7,7 +7,7 @@ document.body.appendChild(app.view);
 
 let animatedCapguy, background, spritesheetname;
 
-spritesheetname = usePng8 ? "images/spritesheet-png8.json" : "images/spritesheet.json";
+spritesheetname = usePng8 ? "spritesheets/spritesheet-png8.json" : "spritesheets/spritesheet.json";
 
 // load sprite sheet image + data file, call setup() if completed
 app.loader
