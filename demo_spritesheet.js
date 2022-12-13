@@ -1,26 +1,21 @@
-
-// create a Pixi application
-let app = new PIXI.Application({ width: 800, height: 450 });
+// Create a PixiJS application
+const app = new PIXI.Application({width: 800, height: 450});
 
 // add the canvas that Pixi automatically created for you to the HTML document
 document.body.appendChild(app.view);
 
-let animatedCapguy, background, spritesheetname;
-
-spritesheetname = usePng8 ? "spritesheets/spritesheet-png8.json" : "spritesheets/spritesheet.json";
+const spriteSheetName = usePng8 ? "spritesheets/spritesheet-png8.json" : "spritesheets/spritesheet.json";
 
 // load sprite sheet image + data file, call setup() if completed
-app.loader
-    .add(spritesheetname)
-    .load(setup);
+PIXI.Assets.load([
+    spriteSheetName
+]).then((textures) => {
 
-
-function setup() {
     // the sprite sheet we've just loaded:
-    let sheet = app.loader.resources[spritesheetname].spritesheet;
+    const sheet = textures[spriteSheetName];
 
     // initialize background sprite
-    background = new PIXI.Sprite(sheet.textures["background.png"]);
+    const background = new PIXI.Sprite(sheet.textures["background.png"]);
     app.stage.addChild(background);
 
     // scale stage container that it fits into the view
@@ -28,10 +23,10 @@ function setup() {
     app.stage.scale.y = app.view.height / background.height;
 
     // create an animated sprite
-    animatedCapguy = new PIXI.AnimatedSprite(sheet.animations["capguy/walk"]);
+    const animatedCapguy = new PIXI.AnimatedSprite(sheet.data.animations["capguy/walk"].map((frame) => sheet.textures[frame]));
 
     // configure + start animation:
-    animatedCapguy.animationSpeed = 0.167;                  // 6 fps
+    animatedCapguy.animationSpeed = 1 / 6;                   // 6 fps
     animatedCapguy.position.set(0, background.height - 100); // almost bottom-left corner of the canvas
     animatedCapguy.play();
 
@@ -40,9 +35,9 @@ function setup() {
 
     // add it to the stage and render!
     app.stage.addChild(animatedCapguy);
-    app.ticker.add(delta => gameLoop(delta));
-}
 
-function gameLoop(delta) {
-    animatedCapguy.x = (animatedCapguy.x + 5*delta) % (background.width + 200);
-}
+    // move the animated sprite to the right, reset to the left when it reaches the end
+    app.ticker.add(delta => {
+        animatedCapguy.x = (animatedCapguy.x + 5 * delta) % (background.width + 200);
+    });
+});

@@ -1,11 +1,10 @@
-// create a Pixi application
-let app = new PIXI.Application({width: 800, height: 450});
+// Create a PixiJS application
+const app = new PIXI.Application({width: 800, height: 450});
 
-// add the canvas that Pixi automatically created for you to the HTML document
+// Add the PixiJS application's canvas to the HTML document
 document.body.appendChild(app.view);
 
-let animatedCapguy, background;
-
+// Define an array of file paths to the images for the Capguy sprite animation
 const capguyFrames = [
     "sprites/capguy/walk_01.png",
     "sprites/capguy/walk_02.png",
@@ -17,6 +16,7 @@ const capguyFrames = [
     "sprites/capguy/walk_08.png",
 ];
 
+// Define an array of file paths to the images for the various objects in the game
 const objects = [
     "sprites/objects/box-a.png",
     "sprites/objects/box-b.png",
@@ -79,18 +79,14 @@ const objects = [
 ];
 
 // load sprite sheet image + data file, call setup() if completed
-app.loader
-    .add("sprites/background.png")
-    .add(capguyFrames)
-    .add(objects)
-    .load(setup);
-
-
-function setup() {
-    let resources = app.loader.resources;
+PIXI.Assets.load([
+    "sprites/background.png",
+    ...capguyFrames,
+    ...objects
+]).then((textures) => {
 
     // initialize background sprite
-    background = new PIXI.Sprite(resources["sprites/background.png"].texture);
+    const background = new PIXI.Sprite(textures["sprites/background.png"]);
     app.stage.addChild(background);
 
     // scale stage container that it fits into the view
@@ -98,18 +94,19 @@ function setup() {
     app.stage.scale.y = app.view.height / background.height;
 
     // create an animated sprite
-    animatedCapguy = new PIXI.AnimatedSprite.fromFrames(capguyFrames);
+    const frames = capguyFrames.map((frame) => textures[frame]);
+    const animatedCapguy = new PIXI.AnimatedSprite(frames);
 
     // configure + start animation:
-    animatedCapguy.animationSpeed = 0.167;                  // 6 fps
+    animatedCapguy.animationSpeed = 1 / 6;                   // 6 fps
     animatedCapguy.position.set(0, background.height - 350); // almost bottom-left corner of the canvas
     animatedCapguy.play();
 
     // add it to the stage and render!
     app.stage.addChild(animatedCapguy);
-    app.ticker.add(delta => gameLoop(delta));
-}
 
-function gameLoop(delta) {
-    animatedCapguy.x = (animatedCapguy.x + 5 * delta) % (background.width + 200);
-}
+    // move the animated sprite to the right, reset to the left when it reaches the end
+    app.ticker.add(delta => {
+        animatedCapguy.x = (animatedCapguy.x + 5 * delta) % (background.width + 200);
+    });
+});
