@@ -23,7 +23,7 @@ PIXI.Assets.load([
     app.stage.scale.y = app.view.height / background.height;
 
     // create an animated sprite
-    const animatedCapguy = new PIXI.AnimatedSprite(sheet.data.animations["capguy/walk"].map((frame) => sheet.textures[frame]));
+    const animatedCapguy = new PIXI.AnimatedSprite(sheet.animations["capguy/walk"]);
 
     // configure + start animation:
     animatedCapguy.animationSpeed = 1 / 6;                   // 6 fps
