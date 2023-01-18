@@ -2,9 +2,9 @@
 <data version="1.0">
     <struct type="Settings">
         <key>fileFormatVersion</key>
-        <int>5</int>
+        <int>6</int>
         <key>texturePackerVersion</key>
-        <string>6.0.1</string>
+        <string>7.0.0</string>
         <key>autoSDSettings</key>
         <array>
             <struct type="AutoSDSettings">
@@ -43,24 +43,14 @@
         <uint>2</uint>
         <key>basisUniversalQualityLevel</key>
         <uint>2</uint>
-        <key>atfCompressData</key>
-        <false/>
-        <key>mipMapMinSize</key>
-        <uint>32768</uint>
         <key>etc1QualityLevel</key>
         <uint>40</uint>
         <key>etc2QualityLevel</key>
         <uint>40</uint>
         <key>dxtCompressionMode</key>
         <enum type="SettingsBase::DxtCompressionMode">DXT_PERCEPTUAL</enum>
-        <key>jxrColorFormat</key>
-        <enum type="SettingsBase::JpegXrColorMode">JXR_YUV444</enum>
-        <key>jxrTrimFlexBits</key>
-        <uint>0</uint>
-        <key>jxrCompressionLevel</key>
-        <uint>0</uint>
         <key>ditherType</key>
-        <enum type="SettingsBase::DitherType">NearestNeighbour</enum>
+        <enum type="SettingsBase::DitherType">PngQuantLow</enum>
         <key>backgroundColor</key>
         <uint>0</uint>
         <key>libGdx</key>
@@ -83,10 +73,8 @@
         <uint>101</uint>
         <key>textureSubPath</key>
         <string></string>
-        <key>atfFormats</key>
-        <string></string>
         <key>textureFormat</key>
-        <enum type="SettingsBase::TextureFormat">png</enum>
+        <enum type="SettingsBase::TextureFormat">png8</enum>
         <key>borderPadding</key>
         <uint>0</uint>
         <key>maxTextureSize</key>
@@ -139,8 +127,8 @@
                 <filename>spritesheet.json</filename>
             </struct>
         </map>
-        <key>multiPack</key>
-        <false/>
+        <key>multiPackMode</key>
+        <enum type="SettingsBase::MultiPackMode">MultiPackOff</enum>
         <key>forceIdenticalLayout</key>
         <false/>
         <key>outputFormat</key>
@@ -185,386 +173,39 @@
         </struct>
         <key>individualSpriteSettings</key>
         <map type="IndividualSpriteSettingsMap">
-            <key type="filename">../sprites/background.png</key>
+            <key type="filename">../sprites/character/01.png</key>
+            <key type="filename">../sprites/character/02.png</key>
+            <key type="filename">../sprites/character/03.png</key>
+            <key type="filename">../sprites/character/04.png</key>
+            <key type="filename">../sprites/character/05.png</key>
+            <key type="filename">../sprites/character/06.png</key>
+            <key type="filename">../sprites/character/07.png</key>
+            <key type="filename">../sprites/character/08.png</key>
             <struct type="IndividualSpriteSettings">
                 <key>pivotPoint</key>
-                <point_f>0,0</point_f>
+                <point_f>0.547692,0.895385</point_f>
                 <key>spriteScale</key>
                 <double>1</double>
                 <key>scale9Enabled</key>
                 <false/>
                 <key>scale9Borders</key>
-                <rect>480,270,960,540</rect>
+                <rect>163,163,325,325</rect>
                 <key>scale9Paddings</key>
-                <rect>480,270,960,540</rect>
-                <key>scale9FromFile</key>
-                <false/>
-            </struct>
-            <key type="filename">../sprites/capguy/walk_01.png</key>
-            <key type="filename">../sprites/capguy/walk_02.png</key>
-            <key type="filename">../sprites/capguy/walk_03.png</key>
-            <key type="filename">../sprites/capguy/walk_04.png</key>
-            <key type="filename">../sprites/capguy/walk_05.png</key>
-            <key type="filename">../sprites/capguy/walk_06.png</key>
-            <key type="filename">../sprites/capguy/walk_07.png</key>
-            <key type="filename">../sprites/capguy/walk_08.png</key>
-            <struct type="IndividualSpriteSettings">
-                <key>pivotPoint</key>
-                <point_f>0.5,1</point_f>
-                <key>spriteScale</key>
-                <double>1</double>
-                <key>scale9Enabled</key>
-                <false/>
-                <key>scale9Borders</key>
-                <rect>47,81,93,162</rect>
-                <key>scale9Paddings</key>
-                <rect>47,81,93,162</rect>
-                <key>scale9FromFile</key>
-                <false/>
-            </struct>
-            <key type="filename">../sprites/objects/box-a.png</key>
-            <struct type="IndividualSpriteSettings">
-                <key>pivotPoint</key>
-                <point_f>0,0</point_f>
-                <key>spriteScale</key>
-                <double>1</double>
-                <key>scale9Enabled</key>
-                <false/>
-                <key>scale9Borders</key>
-                <rect>34,25,68,51</rect>
-                <key>scale9Paddings</key>
-                <rect>34,25,68,51</rect>
-                <key>scale9FromFile</key>
-                <false/>
-            </struct>
-            <key type="filename">../sprites/objects/box-b.png</key>
-            <struct type="IndividualSpriteSettings">
-                <key>pivotPoint</key>
-                <point_f>0,0</point_f>
-                <key>spriteScale</key>
-                <double>1</double>
-                <key>scale9Enabled</key>
-                <false/>
-                <key>scale9Borders</key>
-                <rect>30,25,59,49</rect>
-                <key>scale9Paddings</key>
-                <rect>30,25,59,49</rect>
-                <key>scale9FromFile</key>
-                <false/>
-            </struct>
-            <key type="filename">../sprites/objects/box-open.png</key>
-            <struct type="IndividualSpriteSettings">
-                <key>pivotPoint</key>
-                <point_f>0,0</point_f>
-                <key>spriteScale</key>
-                <double>1</double>
-                <key>scale9Enabled</key>
-                <false/>
-                <key>scale9Borders</key>
-                <rect>30,30,59,60</rect>
-                <key>scale9Paddings</key>
-                <rect>30,30,59,60</rect>
-                <key>scale9FromFile</key>
-                <false/>
-            </struct>
-            <key type="filename">../sprites/objects/bus-bench.png</key>
-            <struct type="IndividualSpriteSettings">
-                <key>pivotPoint</key>
-                <point_f>0,0</point_f>
-                <key>spriteScale</key>
-                <double>1</double>
-                <key>scale9Enabled</key>
-                <false/>
-                <key>scale9Borders</key>
-                <rect>101,106,201,213</rect>
-                <key>scale9Paddings</key>
-                <rect>101,106,201,213</rect>
-                <key>scale9FromFile</key>
-                <false/>
-            </struct>
-            <key type="filename">../sprites/objects/crate-green-a.png</key>
-            <struct type="IndividualSpriteSettings">
-                <key>pivotPoint</key>
-                <point_f>0,0</point_f>
-                <key>spriteScale</key>
-                <double>1</double>
-                <key>scale9Enabled</key>
-                <false/>
-                <key>scale9Borders</key>
-                <rect>26,23,51,45</rect>
-                <key>scale9Paddings</key>
-                <rect>26,23,51,45</rect>
-                <key>scale9FromFile</key>
-                <false/>
-            </struct>
-            <key type="filename">../sprites/objects/crate-green-b.png</key>
-            <struct type="IndividualSpriteSettings">
-                <key>pivotPoint</key>
-                <point_f>0,0</point_f>
-                <key>spriteScale</key>
-                <double>1</double>
-                <key>scale9Enabled</key>
-                <false/>
-                <key>scale9Borders</key>
-                <rect>28,22,55,44</rect>
-                <key>scale9Paddings</key>
-                <rect>28,22,55,44</rect>
-                <key>scale9FromFile</key>
-                <false/>
-            </struct>
-            <key type="filename">../sprites/objects/crate-orange.png</key>
-            <struct type="IndividualSpriteSettings">
-                <key>pivotPoint</key>
-                <point_f>0,0</point_f>
-                <key>spriteScale</key>
-                <double>1</double>
-                <key>scale9Enabled</key>
-                <false/>
-                <key>scale9Borders</key>
-                <rect>26,23,52,46</rect>
-                <key>scale9Paddings</key>
-                <rect>26,23,52,46</rect>
-                <key>scale9FromFile</key>
-                <false/>
-            </struct>
-            <key type="filename">../sprites/objects/crate-purple-a.png</key>
-            <struct type="IndividualSpriteSettings">
-                <key>pivotPoint</key>
-                <point_f>0,0</point_f>
-                <key>spriteScale</key>
-                <double>1</double>
-                <key>scale9Enabled</key>
-                <false/>
-                <key>scale9Borders</key>
-                <rect>28,23,55,45</rect>
-                <key>scale9Paddings</key>
-                <rect>28,23,55,45</rect>
-                <key>scale9FromFile</key>
-                <false/>
-            </struct>
-            <key type="filename">../sprites/objects/crate-purple-b.png</key>
-            <struct type="IndividualSpriteSettings">
-                <key>pivotPoint</key>
-                <point_f>0,0</point_f>
-                <key>spriteScale</key>
-                <double>1</double>
-                <key>scale9Enabled</key>
-                <false/>
-                <key>scale9Borders</key>
-                <rect>26,23,53,47</rect>
-                <key>scale9Paddings</key>
-                <rect>26,23,53,47</rect>
-                <key>scale9FromFile</key>
-                <false/>
-            </struct>
-            <key type="filename">../sprites/objects/dog-poo.png</key>
-            <struct type="IndividualSpriteSettings">
-                <key>pivotPoint</key>
-                <point_f>0,0</point_f>
-                <key>spriteScale</key>
-                <double>1</double>
-                <key>scale9Enabled</key>
-                <false/>
-                <key>scale9Borders</key>
-                <rect>37,24,73,48</rect>
-                <key>scale9Paddings</key>
-                <rect>37,24,73,48</rect>
-                <key>scale9FromFile</key>
-                <false/>
-            </struct>
-            <key type="filename">../sprites/objects/flower-pot.png</key>
-            <struct type="IndividualSpriteSettings">
-                <key>pivotPoint</key>
-                <point_f>0,0</point_f>
-                <key>spriteScale</key>
-                <double>1</double>
-                <key>scale9Enabled</key>
-                <false/>
-                <key>scale9Borders</key>
-                <rect>52,172,104,343</rect>
-                <key>scale9Paddings</key>
-                <rect>52,172,104,343</rect>
-                <key>scale9FromFile</key>
-                <false/>
-            </struct>
-            <key type="filename">../sprites/objects/fruit-stand.png</key>
-            <struct type="IndividualSpriteSettings">
-                <key>pivotPoint</key>
-                <point_f>0,0</point_f>
-                <key>spriteScale</key>
-                <double>1</double>
-                <key>scale9Enabled</key>
-                <false/>
-                <key>scale9Borders</key>
-                <rect>65,37,131,73</rect>
-                <key>scale9Paddings</key>
-                <rect>65,37,131,73</rect>
-                <key>scale9FromFile</key>
-                <false/>
-            </struct>
-            <key type="filename">../sprites/objects/hydrant.png</key>
-            <struct type="IndividualSpriteSettings">
-                <key>pivotPoint</key>
-                <point_f>0,0</point_f>
-                <key>spriteScale</key>
-                <double>1</double>
-                <key>scale9Enabled</key>
-                <false/>
-                <key>scale9Borders</key>
-                <rect>52,150,105,300</rect>
-                <key>scale9Paddings</key>
-                <rect>52,150,105,300</rect>
-                <key>scale9FromFile</key>
-                <false/>
-            </struct>
-            <key type="filename">../sprites/objects/mailbox1/hit-01.png</key>
-            <key type="filename">../sprites/objects/mailbox1/hit-02.png</key>
-            <key type="filename">../sprites/objects/mailbox1/hit-03.png</key>
-            <key type="filename">../sprites/objects/mailbox1/hit-04.png</key>
-            <key type="filename">../sprites/objects/mailbox1/hit-05.png</key>
-            <key type="filename">../sprites/objects/mailbox1/mailbox.png</key>
-            <struct type="IndividualSpriteSettings">
-                <key>pivotPoint</key>
-                <point_f>0,0</point_f>
-                <key>spriteScale</key>
-                <double>1</double>
-                <key>scale9Enabled</key>
-                <false/>
-                <key>scale9Borders</key>
-                <rect>71,42,143,84</rect>
-                <key>scale9Paddings</key>
-                <rect>71,42,143,84</rect>
-                <key>scale9FromFile</key>
-                <false/>
-            </struct>
-            <key type="filename">../sprites/objects/mailbox2/hit-01.png</key>
-            <key type="filename">../sprites/objects/mailbox2/hit-02.png</key>
-            <key type="filename">../sprites/objects/mailbox2/hit-03.png</key>
-            <key type="filename">../sprites/objects/mailbox2/hit-04.png</key>
-            <key type="filename">../sprites/objects/mailbox2/hit-05.png</key>
-            <key type="filename">../sprites/objects/mailbox2/hit-06.png</key>
-            <key type="filename">../sprites/objects/mailbox2/hit-07.png</key>
-            <key type="filename">../sprites/objects/mailbox2/hit-08.png</key>
-            <key type="filename">../sprites/objects/mailbox2/hit-09.png</key>
-            <key type="filename">../sprites/objects/mailbox2/hit-10.png</key>
-            <key type="filename">../sprites/objects/mailbox2/hit-11.png</key>
-            <key type="filename">../sprites/objects/mailbox2/mailbox.png</key>
-            <struct type="IndividualSpriteSettings">
-                <key>pivotPoint</key>
-                <point_f>0,0</point_f>
-                <key>spriteScale</key>
-                <double>1</double>
-                <key>scale9Enabled</key>
-                <false/>
-                <key>scale9Borders</key>
-                <rect>26,50,51,99</rect>
-                <key>scale9Paddings</key>
-                <rect>26,50,51,99</rect>
-                <key>scale9FromFile</key>
-                <false/>
-            </struct>
-            <key type="filename">../sprites/objects/manhole/hit-01.png</key>
-            <key type="filename">../sprites/objects/manhole/hit-02.png</key>
-            <key type="filename">../sprites/objects/manhole/hit-03.png</key>
-            <key type="filename">../sprites/objects/manhole/hit-04.png</key>
-            <key type="filename">../sprites/objects/manhole/hit-05.png</key>
-            <key type="filename">../sprites/objects/manhole/hit-06.png</key>
-            <key type="filename">../sprites/objects/manhole/hit-07.png</key>
-            <key type="filename">../sprites/objects/manhole/manhole.png</key>
-            <struct type="IndividualSpriteSettings">
-                <key>pivotPoint</key>
-                <point_f>0,0</point_f>
-                <key>spriteScale</key>
-                <double>1</double>
-                <key>scale9Enabled</key>
-                <false/>
-                <key>scale9Borders</key>
-                <rect>144,234,289,469</rect>
-                <key>scale9Paddings</key>
-                <rect>144,234,289,469</rect>
-                <key>scale9FromFile</key>
-                <false/>
-            </struct>
-            <key type="filename">../sprites/objects/newspaperbox/hit-01.png</key>
-            <key type="filename">../sprites/objects/newspaperbox/hit-02.png</key>
-            <key type="filename">../sprites/objects/newspaperbox/hit-03.png</key>
-            <key type="filename">../sprites/objects/newspaperbox/hit-04.png</key>
-            <key type="filename">../sprites/objects/newspaperbox/newspaperbox.png</key>
-            <struct type="IndividualSpriteSettings">
-                <key>pivotPoint</key>
-                <point_f>0,0</point_f>
-                <key>spriteScale</key>
-                <double>1</double>
-                <key>scale9Enabled</key>
-                <false/>
-                <key>scale9Borders</key>
-                <rect>33,39,67,78</rect>
-                <key>scale9Paddings</key>
-                <rect>33,39,67,78</rect>
-                <key>scale9FromFile</key>
-                <false/>
-            </struct>
-            <key type="filename">../sprites/objects/rain.png</key>
-            <struct type="IndividualSpriteSettings">
-                <key>pivotPoint</key>
-                <point_f>0,0</point_f>
-                <key>spriteScale</key>
-                <double>1</double>
-                <key>scale9Enabled</key>
-                <false/>
-                <key>scale9Borders</key>
-                <rect>54,17,109,34</rect>
-                <key>scale9Paddings</key>
-                <rect>54,17,109,34</rect>
-                <key>scale9FromFile</key>
-                <false/>
-            </struct>
-            <key type="filename">../sprites/objects/storesign/hit-01.png</key>
-            <key type="filename">../sprites/objects/storesign/hit-02.png</key>
-            <key type="filename">../sprites/objects/storesign/hit-03.png</key>
-            <key type="filename">../sprites/objects/storesign/hit-04.png</key>
-            <key type="filename">../sprites/objects/storesign/hit-05.png</key>
-            <key type="filename">../sprites/objects/storesign/storesign.png</key>
-            <struct type="IndividualSpriteSettings">
-                <key>pivotPoint</key>
-                <point_f>0,0</point_f>
-                <key>spriteScale</key>
-                <double>1</double>
-                <key>scale9Enabled</key>
-                <false/>
-                <key>scale9Borders</key>
-                <rect>56,49,111,99</rect>
-                <key>scale9Paddings</key>
-                <rect>56,49,111,99</rect>
-                <key>scale9FromFile</key>
-                <false/>
-            </struct>
-            <key type="filename">../sprites/objects/trashcan/hit-01.png</key>
-            <key type="filename">../sprites/objects/trashcan/hit-02.png</key>
-            <key type="filename">../sprites/objects/trashcan/hit-03.png</key>
-            <key type="filename">../sprites/objects/trashcan/hit-04.png</key>
-            <key type="filename">../sprites/objects/trashcan/hit-05.png</key>
-            <key type="filename">../sprites/objects/trashcan/hit-06.png</key>
-            <key type="filename">../sprites/objects/trashcan/trashcan.png</key>
-            <struct type="IndividualSpriteSettings">
-                <key>pivotPoint</key>
-                <point_f>0,0</point_f>
-                <key>spriteScale</key>
-                <double>1</double>
-                <key>scale9Enabled</key>
-                <false/>
-                <key>scale9Borders</key>
-                <rect>56,34,112,68</rect>
-                <key>scale9Paddings</key>
-                <rect>56,34,112,68</rect>
+                <rect>163,163,325,325</rect>
                 <key>scale9FromFile</key>
                 <false/>
             </struct>
         </map>
-        <key>fileList</key>
-        <array>
-            <filename>../sprites</filename>
-        </array>
+        <key>fileLists</key>
+        <map type="SpriteSheetMap">
+            <key>default</key>
+            <struct type="SpriteSheet">
+                <key>files</key>
+                <array>
+                    <filename>../sprites</filename>
+                </array>
+            </struct>
+        </map>
         <key>ignoreFileList</key>
         <array/>
         <key>replaceList</key>

@@ -1,5 +1,5 @@
 // Create a PixiJS application
-const app = new PIXI.Application({width: 960, height: 540});
+const app = new PIXI.Application({width: 1920/2, height: 1080/2, autoDensity:true, resolution:2});
 
 // add the canvas that Pixi automatically created for you to the HTML document
 document.body.appendChild(app.view);
@@ -16,8 +16,8 @@ PIXI.Assets.load([
     app.stage.addChild(background);
 
     // scale stage container that it fits into the view
-    app.stage.scale.x = app.view.width / background.width;
-    app.stage.scale.y = app.view.height / background.height;
+    app.stage.scale.x = app.view.width / background.width / 2;
+    app.stage.scale.y = app.view.height / background.height / 2;
 
     // add some midground
     const foreground = PIXI.Sprite.from("scene/middleground.png");
@@ -44,4 +44,6 @@ PIXI.Assets.load([
     app.ticker.add(delta => {
         character.x = (character.x + 5 * delta) % (background.width + 200);
     });
+
 });
+
