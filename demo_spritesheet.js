@@ -9,7 +9,7 @@ PIXI.Assets.load([
     "spritesheets/spritesheet.json",
     "scene/background.png",
     "scene/middleground.png",
-]).then((texture) => {
+]).then(() => {
 
     // initialize background sprite
     const background = PIXI.Sprite.from("scene/background.png");
@@ -24,10 +24,10 @@ PIXI.Assets.load([
     app.stage.addChild(foreground);
 
     // get the sheet json data, required for resolving animations
-    const sheet = texture['spritesheets/spritesheet.json'];
+    const animations = PIXI.Assets.cache.get('spritesheets/spritesheet.json').data.animations;
 
     // create an animated sprite
-    const character = PIXI.AnimatedSprite.fromFrames(sheet.data.animations["character"]);
+    const character = PIXI.AnimatedSprite.fromFrames(animations["character"]);
 
     // configure + start animation:
     character.animationSpeed = 1 / 6;                     // 6 fps
@@ -42,6 +42,6 @@ PIXI.Assets.load([
 
     // move the animated sprite to the right, reset to the left when it reaches the end
     app.ticker.add(delta => {
-        character.x = (character.x + 5 * delta) % (background.width + 200);
+        character.x = (character.x + 6 * delta) % (background.width + 200);
     });
 });
