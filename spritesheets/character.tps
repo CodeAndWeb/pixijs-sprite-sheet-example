@@ -44,13 +44,13 @@
         <key>basisUniversalQualityLevel</key>
         <uint>2</uint>
         <key>etc1QualityLevel</key>
-        <uint>40</uint>
+        <uint>70</uint>
         <key>etc2QualityLevel</key>
-        <uint>40</uint>
+        <uint>70</uint>
         <key>dxtCompressionMode</key>
         <enum type="SettingsBase::DxtCompressionMode">DXT_PERCEPTUAL</enum>
         <key>ditherType</key>
-        <enum type="SettingsBase::DitherType">PngQuantLow</enum>
+        <enum type="SettingsBase::DitherType">NearestNeighbour</enum>
         <key>backgroundColor</key>
         <uint>0</uint>
         <key>libGdx</key>
@@ -74,7 +74,7 @@
         <key>textureSubPath</key>
         <string></string>
         <key>textureFormat</key>
-        <enum type="SettingsBase::TextureFormat">png8</enum>
+        <enum type="SettingsBase::TextureFormat">png</enum>
         <key>borderPadding</key>
         <uint>0</uint>
         <key>maxTextureSize</key>
@@ -124,7 +124,7 @@
             <key>data</key>
             <struct type="DataFile">
                 <key>name</key>
-                <filename>spritesheet.json</filename>
+                <filename>character.json</filename>
             </struct>
         </map>
         <key>multiPackMode</key>
@@ -167,23 +167,23 @@
             <key>heuristicMask</key>
             <false/>
             <key>defaultPivotPoint</key>
-            <point_f>0,0</point_f>
+            <point_f>0.544615,0.886154</point_f>
             <key>writePivotPoints</key>
             <true/>
         </struct>
         <key>individualSpriteSettings</key>
         <map type="IndividualSpriteSettingsMap">
-            <key type="filename">../sprites/character/01.png</key>
-            <key type="filename">../sprites/character/02.png</key>
-            <key type="filename">../sprites/character/03.png</key>
-            <key type="filename">../sprites/character/04.png</key>
-            <key type="filename">../sprites/character/05.png</key>
-            <key type="filename">../sprites/character/06.png</key>
-            <key type="filename">../sprites/character/07.png</key>
-            <key type="filename">../sprites/character/08.png</key>
+            <key type="filename">../sprites/character/walk_01.png</key>
+            <key type="filename">../sprites/character/walk_02.png</key>
+            <key type="filename">../sprites/character/walk_03.png</key>
+            <key type="filename">../sprites/character/walk_04.png</key>
+            <key type="filename">../sprites/character/walk_05.png</key>
+            <key type="filename">../sprites/character/walk_06.png</key>
+            <key type="filename">../sprites/character/walk_07.png</key>
+            <key type="filename">../sprites/character/walk_08.png</key>
             <struct type="IndividualSpriteSettings">
                 <key>pivotPoint</key>
-                <point_f>0.547692,0.895385</point_f>
+                <point_f>0.524615,0.878462</point_f>
                 <key>spriteScale</key>
                 <double>1</double>
                 <key>scale9Enabled</key>

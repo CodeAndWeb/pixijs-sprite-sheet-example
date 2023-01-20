@@ -1,33 +1,32 @@
 // Create a PixiJS application
 const app = new PIXI.Application({width: 960, height: 540});
 
-// add the canvas that Pixi automatically created for you to the HTML document
+// add the view that Pixi created for you to the DOM
 document.body.appendChild(app.view);
 
-// load sprite sheet image + data file, call setup() if completed
+// load the assets and start the scene
 PIXI.Assets.load([
-    "spritesheets/spritesheet.json",
     "scene/background.png",
     "scene/middleground.png",
+    "spritesheets/character.json"
 ]).then(() => {
-
-    // initialize background sprite
+    // initialize background image
     const background = PIXI.Sprite.from("scene/background.png");
     app.stage.addChild(background);
 
-    // scale stage container that it fits into the view
+    // add the middle ground
+    const middleground = PIXI.Sprite.from("scene/middleground.png");
+    app.stage.addChild(middleground);
+
+    // scale stage container to match the background size
     app.stage.scale.x = app.view.width / background.width;
     app.stage.scale.y = app.view.height / background.height;
 
-    // add some midground
-    const foreground = PIXI.Sprite.from("scene/middleground.png");
-    app.stage.addChild(foreground);
-
     // get the sheet json data, required for resolving animations
-    const animations = PIXI.Assets.cache.get('spritesheets/spritesheet.json').data.animations;
+    const animations = PIXI.Assets.cache.get('spritesheets/character.json').data.animations;
 
     // create an animated sprite
-    const character = PIXI.AnimatedSprite.fromFrames(animations["character"]);
+    const character = PIXI.AnimatedSprite.fromFrames(animations["character/walk"]);
 
     // configure + start animation:
     character.animationSpeed = 1 / 6;                     // 6 fps
@@ -35,13 +34,13 @@ PIXI.Assets.load([
     character.play();
 
     // Enable this to update the anchor points with each animation frame
-    // animatedCapguy.updateAnchor = true;
+    character.updateAnchor = true;
 
     // add it to the stage and render!
     app.stage.addChild(character);
 
-    // move the animated sprite to the right, reset to the left when it reaches the end
     app.ticker.add(delta => {
-        character.x = (character.x + 6 * delta) % (background.width + 200);
+        const speed = 6;
+        character.x = (character.x + speed * delta) % (background.width + 200);
     });
 });
