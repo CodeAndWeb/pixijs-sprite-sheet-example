@@ -7,7 +7,7 @@
 	"trimmed": true,
 	"spriteSourceSize": {"x":218,"y":83,"w":249,"h":514},
 	"sourceSize": {"w":650,"h":650},
-	"anchor": {"x":0.524615,"y":0.878462}
+	"anchor": {"x":0.478462,"y":0.896923}
 },
 "character/walk_02.png":
 {
@@ -16,7 +16,7 @@
 	"trimmed": true,
 	"spriteSourceSize": {"x":211,"y":89,"w":235,"h":497},
 	"sourceSize": {"w":650,"h":650},
-	"anchor": {"x":0.524615,"y":0.878462}
+	"anchor": {"x":0.478462,"y":0.896923}
 },
 "character/walk_03.png":
 {
@@ -25,7 +25,7 @@
 	"trimmed": true,
 	"spriteSourceSize": {"x":242,"y":84,"w":170,"h":508},
 	"sourceSize": {"w":650,"h":650},
-	"anchor": {"x":0.524615,"y":0.878462}
+	"anchor": {"x":0.478462,"y":0.896923}
 },
 "character/walk_04.png":
 {
@@ -34,7 +34,7 @@
 	"trimmed": true,
 	"spriteSourceSize": {"x":246,"y":80,"w":159,"h":509},
 	"sourceSize": {"w":650,"h":650},
-	"anchor": {"x":0.524615,"y":0.878462}
+	"anchor": {"x":0.478462,"y":0.896923}
 },
 "character/walk_05.png":
 {
@@ -43,7 +43,7 @@
 	"trimmed": true,
 	"spriteSourceSize": {"x":239,"y":87,"w":180,"h":504},
 	"sourceSize": {"w":650,"h":650},
-	"anchor": {"x":0.524615,"y":0.878462}
+	"anchor": {"x":0.478462,"y":0.896923}
 },
 "character/walk_06.png":
 {
@@ -52,7 +52,7 @@
 	"trimmed": true,
 	"spriteSourceSize": {"x":230,"y":89,"w":204,"h":506},
 	"sourceSize": {"w":650,"h":650},
-	"anchor": {"x":0.524615,"y":0.878462}
+	"anchor": {"x":0.478462,"y":0.896923}
 },
 "character/walk_07.png":
 {
@@ -61,7 +61,7 @@
 	"trimmed": true,
 	"spriteSourceSize": {"x":238,"y":83,"w":179,"h":511},
 	"sourceSize": {"w":650,"h":650},
-	"anchor": {"x":0.524615,"y":0.878462}
+	"anchor": {"x":0.478462,"y":0.896923}
 },
 "character/walk_08.png":
 {
@@ -70,18 +70,18 @@
 	"trimmed": true,
 	"spriteSourceSize": {"x":228,"y":82,"w":177,"h":516},
 	"sourceSize": {"w":650,"h":650},
-	"anchor": {"x":0.524615,"y":0.878462}
+	"anchor": {"x":0.478462,"y":0.896923}
 }},
 "animations": {
 	"character/walk": ["character/walk_01.png","character/walk_02.png","character/walk_03.png","character/walk_04.png","character/walk_05.png","character/walk_06.png","character/walk_07.png","character/walk_08.png"]
 },
 "meta": {
 	"app": "https://www.codeandweb.com/texturepacker",
-	"version": "1.0",
+	"version": "1.1",
 	"image": "character.png",
 	"format": "RGBA8888",
 	"size": {"w":797,"h":1024},
 	"scale": "1",
-	"smartupdate": "$TexturePacker:SmartUpdate:d5b0c5918d63c0cb9467ccaea52e7fb4:936e32f194be8e307f55593a08c5874a:42e475aa4a03af306bdc7acb5ff91d19$"
+	"smartupdate": "$TexturePacker:SmartUpdate:f2a35685f3bae39c7cb750286d93cf26:936e32f194be8e307f55593a08c5874a:42e475aa4a03af306bdc7acb5ff91d19$"
 }
 }
