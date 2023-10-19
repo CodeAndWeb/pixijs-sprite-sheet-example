@@ -7,8 +7,7 @@ document.body.appendChild(app.view);
 // load the assets and start the scene
 PIXI.Assets.load([
     "spritesheets/character.json",
-    "scene/background.png",
-    "scene/middleground.png"
+    "scene/background.png"
 ]).then(() => {
     // initialize background image
     const background = PIXI.Sprite.from("scene/background.png");
@@ -18,8 +17,8 @@ PIXI.Assets.load([
     app.stage.scale.x = app.view.width / background.width;
     app.stage.scale.y = app.view.height / background.height;
 
-    // add the middle ground
-    const middleground = PIXI.Sprite.from("scene/middleground.png");
+    // add the middle ground from the sprite sheet
+    const middleground = PIXI.Sprite.from("middleground.png");
     app.stage.addChild(middleground);
 
     // get the sheet json data, required for resolving animations
@@ -44,4 +43,29 @@ PIXI.Assets.load([
         const speed = 6;
         character.x = (character.x + speed * delta) % (background.width + 200);
     });
+
+    // some 9-scale sprites
+    const sprite9a = new PIXI.NineSlicePlane(PIXI.Texture.from("button.png"));
+    sprite9a.position.set(10,10);
+    sprite9a.width = 100;
+    sprite9a.height = 100;
+    app.stage.addChild(sprite9a);
+
+    const sprite9b = new PIXI.NineSlicePlane(PIXI.Texture.from("button.png"));
+    sprite9b.position.set(130,10);
+    sprite9b.width = 200;
+    sprite9b.height = 100;
+    app.stage.addChild(sprite9b);
+
+    const sprite9c = new PIXI.NineSlicePlane(PIXI.Texture.from("button.png"));
+    sprite9c.position.set(10, 130);
+    sprite9c.width = 100;
+    sprite9c.height = 200;
+    app.stage.addChild(sprite9c);
+
+    const sprite9d = new PIXI.NineSlicePlane(PIXI.Texture.from("button.png"));
+    sprite9d.position.set(130, 130);
+    sprite9d.width = 200;
+    sprite9d.height = 200;
+    app.stage.addChild(sprite9d);
 });
