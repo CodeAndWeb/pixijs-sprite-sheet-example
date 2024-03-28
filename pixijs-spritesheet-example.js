@@ -1,21 +1,25 @@
-// Create a PixiJS application
-const app = new PIXI.Application({width: 960, height: 540});
+(async () => {
 
-// add the view that Pixi created for you to the DOM
-document.body.appendChild(app.view);
+    // Create a PixiJS application
+    const app = new PIXI.Application();
+    await app.init({width: 960, height: 540});
 
-// load the assets and start the scene
-PIXI.Assets.load([
-    "spritesheets/character.json",
-    "scene/background.png"
-]).then(() => {
+    // add the canvas that Pixi created for you to the DOM
+    document.body.appendChild(app.canvas);
+
+    // load the assets
+    await PIXI.Assets.load([
+        "spritesheets/character.json",
+        "scene/background.png"
+    ]);
+
     // initialize background image
     const background = PIXI.Sprite.from("scene/background.png");
     app.stage.addChild(background);
 
     // scale stage container to match the background size
-    app.stage.scale.x = app.view.width / background.width;
-    app.stage.scale.y = app.view.height / background.height;
+    app.stage.scale.x = app.canvas.width / background.width;
+    app.stage.scale.y = app.canvas.height / background.height;
 
     // add the middle ground from the sprite sheet
     const middleground = PIXI.Sprite.from("middleground.png");
@@ -39,33 +43,34 @@ PIXI.Assets.load([
     app.stage.addChild(character);
 
     // move the character to the right, restart on the left
-    app.ticker.add(delta => {
+    app.ticker.add(ticker => {
         const speed = 6;
-        character.x = (character.x + speed * delta) % (background.width + 200);
+        character.x = (character.x + speed * ticker.deltaTime) % (background.width + 200);
     });
 
     // some 9-scale sprites
-    const sprite9a = new PIXI.NineSlicePlane(PIXI.Texture.from("button.png"));
+    const sprite9a = new PIXI.NineSliceSprite(PIXI.Texture.from("button.png"));
     sprite9a.position.set(10,10);
     sprite9a.width = 100;
     sprite9a.height = 100;
     app.stage.addChild(sprite9a);
 
-    const sprite9b = new PIXI.NineSlicePlane(PIXI.Texture.from("button.png"));
+    const sprite9b = new PIXI.NineSliceSprite(PIXI.Texture.from("button.png"));
     sprite9b.position.set(130,10);
     sprite9b.width = 200;
     sprite9b.height = 100;
     app.stage.addChild(sprite9b);
 
-    const sprite9c = new PIXI.NineSlicePlane(PIXI.Texture.from("button.png"));
+    const sprite9c = new PIXI.NineSliceSprite(PIXI.Texture.from("button.png"));
     sprite9c.position.set(10, 130);
     sprite9c.width = 100;
     sprite9c.height = 200;
     app.stage.addChild(sprite9c);
 
-    const sprite9d = new PIXI.NineSlicePlane(PIXI.Texture.from("button.png"));
+    const sprite9d = new PIXI.NineSliceSprite(PIXI.Texture.from("button.png"));
     sprite9d.position.set(130, 130);
     sprite9d.width = 200;
     sprite9d.height = 200;
     app.stage.addChild(sprite9d);
-});
+
+})();
