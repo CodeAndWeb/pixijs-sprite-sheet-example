@@ -4,7 +4,7 @@
         <key>fileFormatVersion</key>
         <int>6</int>
         <key>texturePackerVersion</key>
-        <string>7.1.0</string>
+        <string>7.9.0</string>
         <key>autoSDSettings</key>
         <array>
             <struct type="AutoSDSettings">
@@ -44,9 +44,9 @@
         <key>basisUniversalQualityLevel</key>
         <uint>2</uint>
         <key>etc1QualityLevel</key>
-        <uint>40</uint>
+        <uint>70</uint>
         <key>etc2QualityLevel</key>
-        <uint>40</uint>
+        <uint>70</uint>
         <key>dxtCompressionMode</key>
         <enum type="SettingsBase::DxtCompressionMode">DXT_PERCEPTUAL</enum>
         <key>ditherType</key>
@@ -173,7 +173,22 @@
         </struct>
         <key>individualSpriteSettings</key>
         <map type="IndividualSpriteSettingsMap">
-            <key type="filename">../sprites/button.png</key>
+            <key type="filename">../assets/scene/middleground.png</key>
+            <struct type="IndividualSpriteSettings">
+                <key>pivotPoint</key>
+                <point_f>0,0</point_f>
+                <key>spriteScale</key>
+                <double>1</double>
+                <key>scale9Enabled</key>
+                <false/>
+                <key>scale9Borders</key>
+                <rect>480,270,960,540</rect>
+                <key>scale9Paddings</key>
+                <rect>480,270,960,540</rect>
+                <key>scale9FromFile</key>
+                <false/>
+            </struct>
+            <key type="filename">../assets/sprites/button.png</key>
             <struct type="IndividualSpriteSettings">
                 <key>pivotPoint</key>
                 <point_f>0,0</point_f>
@@ -188,14 +203,14 @@
                 <key>scale9FromFile</key>
                 <false/>
             </struct>
-            <key type="filename">../sprites/character/walk_01.png</key>
-            <key type="filename">../sprites/character/walk_02.png</key>
-            <key type="filename">../sprites/character/walk_03.png</key>
-            <key type="filename">../sprites/character/walk_04.png</key>
-            <key type="filename">../sprites/character/walk_05.png</key>
-            <key type="filename">../sprites/character/walk_06.png</key>
-            <key type="filename">../sprites/character/walk_07.png</key>
-            <key type="filename">../sprites/character/walk_08.png</key>
+            <key type="filename">../assets/sprites/character/walk_01.png</key>
+            <key type="filename">../assets/sprites/character/walk_02.png</key>
+            <key type="filename">../assets/sprites/character/walk_03.png</key>
+            <key type="filename">../assets/sprites/character/walk_04.png</key>
+            <key type="filename">../assets/sprites/character/walk_05.png</key>
+            <key type="filename">../assets/sprites/character/walk_06.png</key>
+            <key type="filename">../assets/sprites/character/walk_07.png</key>
+            <key type="filename">../assets/sprites/character/walk_08.png</key>
             <struct type="IndividualSpriteSettings">
                 <key>pivotPoint</key>
                 <point_f>0.478462,0.896923</point_f>
@@ -210,21 +225,6 @@
                 <key>scale9FromFile</key>
                 <false/>
             </struct>
-            <key type="filename">../sprites/middleground.png</key>
-            <struct type="IndividualSpriteSettings">
-                <key>pivotPoint</key>
-                <point_f>0,0</point_f>
-                <key>spriteScale</key>
-                <double>1</double>
-                <key>scale9Enabled</key>
-                <false/>
-                <key>scale9Borders</key>
-                <rect>480,270,960,540</rect>
-                <key>scale9Paddings</key>
-                <rect>480,270,960,540</rect>
-                <key>scale9FromFile</key>
-                <false/>
-            </struct>
         </map>
         <key>fileLists</key>
         <map type="SpriteSheetMap">
@@ -232,7 +232,8 @@
             <struct type="SpriteSheet">
                 <key>files</key>
                 <array>
-                    <filename>../sprites</filename>
+                    <filename>../assets/sprites</filename>
+                    <filename>../assets/scene/middleground.png</filename>
                 </array>
             </struct>
         </map>
