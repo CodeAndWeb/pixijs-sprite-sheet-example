@@ -10,11 +10,11 @@
     // load the assets
     await PIXI.Assets.load([
         "spritesheets/character.json",
-        "scene/background.png"
+         "assets/scene/background.png"
     ]);
 
     // initialize background image
-    const background = PIXI.Sprite.from("scene/background.png");
+    const background = PIXI.Sprite.from("assets/scene/background.png");
     app.stage.addChild(background);
 
     // scale stage container to match the background size
@@ -33,7 +33,7 @@
 
     // configure + start animation:
     character.animationSpeed = 1 / 6;                     // 6 fps
-    character.position.set(150, background.height - 180);
+    character.position.set(150, background.height - 180); // almost bottom-left corner of the canvas
     character.play();
 
     // Enable this to update the anchor points with each animation frame
