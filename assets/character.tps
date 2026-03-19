@@ -4,7 +4,7 @@
         <key>fileFormatVersion</key>
         <int>6</int>
         <key>texturePackerVersion</key>
-        <string>7.9.0</string>
+        <string>7.12.0</string>
         <key>autoSDSettings</key>
         <array>
             <struct type="AutoSDSettings">
@@ -124,7 +124,7 @@
             <key>data</key>
             <struct type="DataFile">
                 <key>name</key>
-                <filename>character.json</filename>
+                <filename>../public/spritesheets/character.json</filename>
             </struct>
         </map>
         <key>multiPackMode</key>
@@ -173,7 +173,7 @@
         </struct>
         <key>individualSpriteSettings</key>
         <map type="IndividualSpriteSettingsMap">
-            <key type="filename">../assets/scene/middleground.png</key>
+            <key type="filename">scene/middleground.png</key>
             <struct type="IndividualSpriteSettings">
                 <key>pivotPoint</key>
                 <point_f>0,0</point_f>
@@ -188,7 +188,7 @@
                 <key>scale9FromFile</key>
                 <false/>
             </struct>
-            <key type="filename">../assets/sprites/button.png</key>
+            <key type="filename">sprites/button.png</key>
             <struct type="IndividualSpriteSettings">
                 <key>pivotPoint</key>
                 <point_f>0,0</point_f>
@@ -203,14 +203,14 @@
                 <key>scale9FromFile</key>
                 <false/>
             </struct>
-            <key type="filename">../assets/sprites/character/walk_01.png</key>
-            <key type="filename">../assets/sprites/character/walk_02.png</key>
-            <key type="filename">../assets/sprites/character/walk_03.png</key>
-            <key type="filename">../assets/sprites/character/walk_04.png</key>
-            <key type="filename">../assets/sprites/character/walk_05.png</key>
-            <key type="filename">../assets/sprites/character/walk_06.png</key>
-            <key type="filename">../assets/sprites/character/walk_07.png</key>
-            <key type="filename">../assets/sprites/character/walk_08.png</key>
+            <key type="filename">sprites/character/walk_01.png</key>
+            <key type="filename">sprites/character/walk_02.png</key>
+            <key type="filename">sprites/character/walk_03.png</key>
+            <key type="filename">sprites/character/walk_04.png</key>
+            <key type="filename">sprites/character/walk_05.png</key>
+            <key type="filename">sprites/character/walk_06.png</key>
+            <key type="filename">sprites/character/walk_07.png</key>
+            <key type="filename">sprites/character/walk_08.png</key>
             <struct type="IndividualSpriteSettings">
                 <key>pivotPoint</key>
                 <point_f>0.478462,0.896923</point_f>
@@ -232,8 +232,8 @@
             <struct type="SpriteSheet">
                 <key>files</key>
                 <array>
-                    <filename>../assets/sprites</filename>
-                    <filename>../assets/scene/middleground.png</filename>
+                    <filename>scene</filename>
+                    <filename>sprites</filename>
                 </array>
             </struct>
         </map>

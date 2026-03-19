@@ -1,0 +1,16 @@
+{
+  "name": "pixijs-sprite-sheet-example",
+  "version": "1.0.0",
+  "private": true,
+  "scripts": {
+    "dev": "vite",
+    "build": "vite build",
+    "preview": "vite preview"
+  },
+  "dependencies": {
+    "pixi.js": "^8.17.1"
+  },
+  "devDependencies": {
+    "vite": "^8.0.1"
+  }
+}

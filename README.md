@@ -5,3 +5,12 @@
 </a>
 
 This is the demo code for our tutorial [How to create sprite sheets & animations for PixiJS](https://www.codeandweb.com/texturepacker/tutorials/how-to-create-sprite-sheets-and-animations-with-pixijs)
+
+## Running
+
+```bash
+npm install
+npm run dev
+```
+
+Then open [http://localhost:5173](http://localhost:5173).
