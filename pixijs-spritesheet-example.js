@@ -1,5 +1,9 @@
 import { Application, Assets, Sprite, Texture, AnimatedSprite, NineSliceSprite } from 'pixi.js';
 
+import { extensions, loadKTX2, loadBasis } from 'pixi.js';
+extensions.add(loadKTX2);
+extensions.add(loadBasis);
+
 (async () => {
 
     // Create a PixiJS application
